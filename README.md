@@ -1,4 +1,3 @@
-# Basta2017_SvcFabric_Lab
-Service Fabric Example of the lab at BASTA! 2017 in Mainz (Germany)
+# Example code for the lab at the conference BASTA! 2017: Microservices with Azure Service Fabric
 
 Requirements: http://blog.bridging-it.de/blog/blogeintrag_4800.html 
