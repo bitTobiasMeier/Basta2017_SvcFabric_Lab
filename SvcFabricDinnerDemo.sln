@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.Restaur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.RestaurantService.Interfaces", "SvcFabricDinnerDemo.RestaurantService.Interfaces\SvcFabricDinnerDemo.RestaurantService.Interfaces.csproj", "{66FC8A86-D948-45C0-A546-F3AB0D6AE3B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.DinnerMenuService", "SvcFabricDinnerDemo.DinnerMenuService\SvcFabricDinnerDemo.DinnerMenuService.csproj", "{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.DinnerMenuService.Interfaces", "SvcFabricDinnerDemo.DinnerMenuService.Interfaces\SvcFabricDinnerDemo.DinnerMenuService.Interfaces.csproj", "{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,20 @@ Global
 		{66FC8A86-D948-45C0-A546-F3AB0D6AE3B1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66FC8A86-D948-45C0-A546-F3AB0D6AE3B1}.Release|x64.ActiveCfg = Release|Any CPU
 		{66FC8A86-D948-45C0-A546-F3AB0D6AE3B1}.Release|x64.Build.0 = Release|Any CPU
+		{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}.Debug|x64.ActiveCfg = Debug|x64
+		{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}.Debug|x64.Build.0 = Debug|x64
+		{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}.Release|Any CPU.ActiveCfg = Release|x64
+		{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}.Release|x64.ActiveCfg = Release|x64
+		{CCABDE45-D723-4C13-B9FA-C07A78AFF4C7}.Release|x64.Build.0 = Release|x64
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Debug|x64.Build.0 = Debug|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A4DEB925-3EEE-4FF5-BE9C-4C09DAA9820F}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
