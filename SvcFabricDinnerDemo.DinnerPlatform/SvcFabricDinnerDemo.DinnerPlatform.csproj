@@ -21,6 +21,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
     <PackageReference Include="Microsoft.ServiceFabric" Version="5.7.198" />
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="2.7.198" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.WebListener" Version="2.7.198" />
     <PackageReference Include="Microsoft.ServiceFabric.Data" Version="2.7.198" />
     <PackageReference Include="Microsoft.ServiceFabric.Services" Version="2.7.198" />
@@ -35,7 +36,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SvcFabricDinnerDemo.DinnerMenuService.Interfaces\SvcFabricDinnerDemo.DinnerMenuService.Interfaces.csproj" />
+    <ProjectReference Include="..\SvcFabricDinnerDemo.OrderActor.Interfaces\SvcFabricDinnerDemo.OrderActor.Interfaces.csproj" />
     <ProjectReference Include="..\SvcFabricDinnerDemo.RestaurantService.Interfaces\SvcFabricDinnerDemo.RestaurantService.Interfaces.csproj" />
+    <ProjectReference Include="..\SvcFabricDinnerDemo.TableActor.Interfaces\SvcFabricDinnerDemo.TableActor.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
