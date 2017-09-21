@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SvcFabricDinnerDemo.DinnerPlatform\SvcFabricDinnerDemo.DinnerPlatform.csproj" />
+    <ProjectReference Include="..\SvcFabricDinnerDemo.RestaurantService\SvcFabricDinnerDemo.RestaurantService.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>
