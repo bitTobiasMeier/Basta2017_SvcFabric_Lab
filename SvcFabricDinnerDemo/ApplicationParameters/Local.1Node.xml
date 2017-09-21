@@ -11,5 +11,8 @@
     <Parameter Name="OrderActorService_PartitionCount" Value="1" />
     <Parameter Name="OrderActorService_TargetReplicaSetSize" Value="1" />
     <Parameter Name="OrderActorService_MinReplicaSetSize" Value="1" />
+    <Parameter Name="TableActorService_PartitionCount" Value="1" />
+    <Parameter Name="TableActorService_TargetReplicaSetSize" Value="1" />
+    <Parameter Name="TableActorService_MinReplicaSetSize" Value="1" />
   </Parameters>
 </Application>

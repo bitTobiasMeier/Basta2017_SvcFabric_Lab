@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.OrderAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.OrderActor.Interfaces", "SvcFabricDinnerDemo.OrderActor.Interfaces\SvcFabricDinnerDemo.OrderActor.Interfaces.csproj", "{BF029221-9704-4C1D-8072-0AD3B37D1699}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.TableActor", "SvcFabricDinnerDemo.TableActor\SvcFabricDinnerDemo.TableActor.csproj", "{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.TableActor.Interfaces", "SvcFabricDinnerDemo.TableActor.Interfaces\SvcFabricDinnerDemo.TableActor.Interfaces.csproj", "{80CE2775-258C-4961-9A65-3B748DB85399}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +87,18 @@ Global
 		{BF029221-9704-4C1D-8072-0AD3B37D1699}.Release|Any CPU.ActiveCfg = Release|x64
 		{BF029221-9704-4C1D-8072-0AD3B37D1699}.Release|x64.ActiveCfg = Release|x64
 		{BF029221-9704-4C1D-8072-0AD3B37D1699}.Release|x64.Build.0 = Release|x64
+		{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}.Debug|x64.ActiveCfg = Debug|x64
+		{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}.Debug|x64.Build.0 = Debug|x64
+		{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}.Release|Any CPU.ActiveCfg = Release|x64
+		{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}.Release|x64.ActiveCfg = Release|x64
+		{CA68E7DF-ADF4-4461-B3DC-E12006DA823A}.Release|x64.Build.0 = Release|x64
+		{80CE2775-258C-4961-9A65-3B748DB85399}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{80CE2775-258C-4961-9A65-3B748DB85399}.Debug|x64.ActiveCfg = Debug|x64
+		{80CE2775-258C-4961-9A65-3B748DB85399}.Debug|x64.Build.0 = Debug|x64
+		{80CE2775-258C-4961-9A65-3B748DB85399}.Release|Any CPU.ActiveCfg = Release|x64
+		{80CE2775-258C-4961-9A65-3B748DB85399}.Release|x64.ActiveCfg = Release|x64
+		{80CE2775-258C-4961-9A65-3B748DB85399}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

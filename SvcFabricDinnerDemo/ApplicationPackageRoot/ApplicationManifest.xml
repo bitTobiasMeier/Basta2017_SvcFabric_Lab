@@ -11,10 +11,16 @@
     <Parameter Name="OrderActorService_PartitionCount" DefaultValue="10" />
     <Parameter Name="OrderActorService_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="OrderActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="TableActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="TableActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="TableActorService_TargetReplicaSetSize" DefaultValue="3" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="SvcFabricDinnerDemo.TableActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="SvcFabricDinnerDemo.OrderActorPkg" ServiceManifestVersion="1.0.0" />
   </ServiceManifestImport>
@@ -54,6 +60,11 @@
     <Service Name="OrderActorService" GeneratedIdRef="b8abcf1a-e835-4c1f-9bc1-131eeb8b47c6|Persisted">
       <StatefulService ServiceTypeName="OrderActorServiceType" TargetReplicaSetSize="[OrderActorService_TargetReplicaSetSize]" MinReplicaSetSize="[OrderActorService_MinReplicaSetSize]">
         <UniformInt64Partition PartitionCount="[OrderActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="TableActorService" GeneratedIdRef="5b230bda-cc77-4f54-8db3-e1937e3f11be|Persisted">
+      <StatefulService ServiceTypeName="TableActorServiceType" TargetReplicaSetSize="[TableActorService_TargetReplicaSetSize]" MinReplicaSetSize="[TableActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[TableActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
       </StatefulService>
     </Service>
   </DefaultServices>
