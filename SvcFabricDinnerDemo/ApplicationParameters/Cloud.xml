@@ -8,5 +8,6 @@
     <Parameter Name="SvcFabricDinnerDemo.RestaurantService_MinReplicaSetSize" Value="3" />
     <Parameter Name="SvcFabricDinnerDemo.RestaurantService_TargetReplicaSetSize" Value="3" />
     <Parameter Name="SvcFabricDinnerDemo.DinnerPlatform_InstanceCount" Value="-1" />
+    <Parameter Name="X509FindValue" Value="FFCBD3A491B382111480DE4AD8F62BB4F9199A6D" />
   </Parameters>
 </Application>

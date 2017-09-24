@@ -14,6 +14,7 @@
     <Parameter Name="TableActorService_PartitionCount" DefaultValue="10" />
     <Parameter Name="TableActorService_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="TableActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="X509FindValue" DefaultValue="4892e4af140e92a2ee614954df29b710d20928d4" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
@@ -35,6 +36,9 @@
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="SvcFabricDinnerDemo.DinnerPlatformPkg" ServiceManifestVersion="1.0.0" />
     <ConfigOverrides />
+    <Policies>
+      <EndpointBindingPolicy EndpointRef="ServiceEndpoint" CertificateRef="TestCert1" />
+    </Policies>
   </ServiceManifestImport>
   <DefaultServices>
     <!-- The section below creates instances of service types, when an instance of this 
@@ -68,4 +72,7 @@
       </StatefulService>
     </Service>
   </DefaultServices>
+  <Certificates>
+    <EndpointCertificate X509StoreName="MY" X509FindValue="[X509FindValue]" Name="TestCert1" />
+  </Certificates>
 </ApplicationManifest>
