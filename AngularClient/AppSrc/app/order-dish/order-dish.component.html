@@ -1,0 +1,20 @@
+<div class="container">
+
+<p><b>Bitte wählen Sie ein Gericht aus:</b></p>
+<p class="selected-message">{{message}}</p>
+
+
+<div class="card col-md-3 mb-3" *ngFor="let dish of dishes" id="card-dish">
+  
+  <div class="card-select-dish">
+    <a class="btn btn-primary" (click)="order(dish)" role="button" id="button">Bestellen</a>
+    <div class="menue-text">Preis: {{dish.price}} €</div>
+    <img class="card-img-top dishimg" [src]="dish.imageUrl" [alt]="dish.name">
+    <h3 class="menue-title" bg-primary> {{dish.name}}</h3>
+    <div class="menue-text">{{dish.description}}</div><br/>
+  </div>
+  
+  
+</div><br/>
+ </div>
+

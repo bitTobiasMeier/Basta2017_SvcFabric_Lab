@@ -1,0 +1,19 @@
+<div class="card col-12" style="border: 0px solid white">
+  <h3>Administration</h3>
+
+  <div class="card col-6" style="border: 0px">
+  <dinner-add-restaurant (restaurantAdded)="restaurantAdded($event)"></dinner-add-restaurant>
+  </div><br/>
+
+  <div [hidden]='restaurants.length == 0' class="col-12">
+      <div class="card-header col-6">Anzahl Restaurants: {{restaurants.length}}</div> <br/>
+
+      <div class="card  mb-6" *ngFor="let restaurant of restaurants" style="background-color: #d7dae0">
+          <dinner-restaurant-detail [restaurant]="restaurant"></dinner-restaurant-detail>
+       </div> 
+  </div>
+  <br/>
+  <a [routerLink]="['/']">Zurück zur Übersicht</a>
+
+</div>
+

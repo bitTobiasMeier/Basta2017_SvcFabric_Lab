@@ -1,0 +1,7 @@
+<div class="container"> 
+  <p><b>Getätigte Bestellungen</b></p>
+  <div class="card col-md-5 mb-3" *ngFor="let order of orders">
+    <h3 class="menue-title">{{order.dish}}: {{order.state}}</h3>
+    <span class="menue-text">{{order.price}} €</span>
+  </div>
+</div>

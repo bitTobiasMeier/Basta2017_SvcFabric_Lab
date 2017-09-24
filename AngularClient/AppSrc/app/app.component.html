@@ -1,0 +1,35 @@
+<div class="card" id="header"> 
+  
+    <a href="http://www.bridging-it.de/" class="card-img-top" >
+      <img src="assets/bitlogo.png"/> 
+    </a><br/>
+    <h1>Microservices mit Azure Service Fabric:</h1>
+  </div>
+  
+ <div class="container"> 
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+  <div  id="navbarSupportedContent" class="col-md-12">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/kitchens']">Küche</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin']">Admin</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link " href="http://blog.bridging-it.de/author/Tobias.Meier" _target="new">Weitere Infos</a>
+          <ul class="dropdown-menu">
+            <a href="" >: http://blog.bridging-it-de/author/Tobias.Meier</a>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</nav> <br/>
+
+
+  <router-outlet></router-outlet>
+</div>

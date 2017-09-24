@@ -1,0 +1,39 @@
+<div id="adminNeuesRegister">
+  <div class="card-header">Neues Gericht: </div>
+  <div class="card-body">
+    <form #form="ngForm" (ngSubmit)="save(form.value)" class="form-horizontal">
+
+
+      <div class="form-group">
+        <label for="name" class="control-label col-xs-1">Gericht</label>
+        <div class="col-xs-3">
+          <input type="text" name="name" ngModel [(ngModel)]="name" class="form-control">
+        </div>
+        <label for="description" class="control-label col-xs-1">Beschreibung</label>
+        <div class="col-xs-3">
+          <input type="text" name="description" ngModel [(ngModel)]="description" class="form-control">
+        </div>
+        <label for="imageUrl" class="control-label col-xs-1">Url Bild </label>
+        <div class="col-xs-3">
+          <input type="text" name="imageUrl" ngModel [(ngModel)]="imageUrl" class="form-control">
+        </div>
+        <label for="price" class="control-label col-xs-1">Preis</label>
+        <div class="col-xs-3">
+          <input type="number" name="price" ngModel [(ngModel)]="price" class="form-control">
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-xs-4">
+          <span class="selected-message">{{message}}</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-default" id="button">Anlegen</button> </div>
+      </div>
+    </form>
+
+  </div>
+</div>

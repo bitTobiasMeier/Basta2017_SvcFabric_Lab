@@ -1,0 +1,14 @@
+<div class="container">
+
+<p><b>Bitte wählen Sie einen Tisch aus.</b></p>
+<div class="row"> 
+  
+  <div class="card col-md-5 mb-3" *ngFor="let table of tables">
+    <div class="card-select">
+      <h3 class="card-title">Tisch {{table.tablenr}}</h3>
+      <a class="btn btn-primary" [routerLink]="['/restaurants/', restaurantId, table.id]"  role="button">Auswählen</a>
+    </div>
+  </div>
+</div>
+</div>
+
