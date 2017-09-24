@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SvcFabricDinnerDemo.DinnerMenuService.Interfaces\SvcFabricDinnerDemo.DinnerMenuService.Interfaces.csproj" />
+    <ProjectReference Include="..\SvcFabricDinnerDemo.KitchenActor.Interfaces\SvcFabricDinnerDemo.KitchenActor.Interfaces.csproj" />
     <ProjectReference Include="..\SvcFabricDinnerDemo.OrderActor.Interfaces\SvcFabricDinnerDemo.OrderActor.Interfaces.csproj" />
     <ProjectReference Include="..\SvcFabricDinnerDemo.RestaurantService.Interfaces\SvcFabricDinnerDemo.RestaurantService.Interfaces.csproj" />
     <ProjectReference Include="..\SvcFabricDinnerDemo.TableActor.Interfaces\SvcFabricDinnerDemo.TableActor.Interfaces.csproj" />

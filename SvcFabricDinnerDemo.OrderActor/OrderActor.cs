@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
 using Microsoft.ServiceFabric.Actors.Client;
+using SvcFabricDinnerDemo.KitchenActor.Interfaces;
 using SvcFabricDinnerDemo.OrderActor.Interfaces;
 
 namespace SvcFabricDinnerDemo.OrderActor
@@ -20,7 +21,7 @@ namespace SvcFabricDinnerDemo.OrderActor
     ///  - None: State is kept in memory only and not replicated.
     /// </remarks>
     [StatePersistence(StatePersistence.Persisted)]
-    internal class OrderActor : Actor, IOrderActor, IRemindable
+    internal class OrderActor : Actor, IOrderActor, IRemindable, IKitchenEvents
     {
         private const string OrderDataKey = "OrderDataKey";
         private const string OrderStateKey = "OrderStateKey";
@@ -132,13 +133,13 @@ namespace SvcFabricDinnerDemo.OrderActor
                 {
                     //ToDo: Küche benachrichten
                     var order = await GetOrderContractAsync(CancellationToken.None);
-                    /*  var kitchenActor = new KitchenActorProxy().CreateActor(order.RestaurantId);
+                     var kitchenActor = new KitchenActorProxy().CreateActor(order.RestaurantId);
                      await kitchenActor.SubscribeAsync<IKitchenEvents>(this);
                      await kitchenActor.AddOrderAsync(new KitchenOrder
                      {
                          DishId = order.DishId,
                          OrderId = Id.GetGuidId()
-                     });*/
+                     });
                     await SetOrderStateAsync(OrderState.InKitchenQueue);
                     break;
                 }
@@ -158,6 +159,18 @@ namespace SvcFabricDinnerDemo.OrderActor
                     break;
                 }
             }
+        }
+
+        async void IKitchenEvents.CookingStarted(ActorId actorId, KitchenOrder order)
+        {
+            await SetOrderStateAsync(OrderState.Cooking);
+        }
+
+        async void IKitchenEvents.CookingCompleted(ActorId actorId, KitchenOrder order)
+        {
+            await SetOrderStateAsync(OrderState.Cooked);
+            var kitchenActor = new KitchenActorProxy().CreateActor(actorId.GetGuidId());
+            await kitchenActor.UnsubscribeAsync<IKitchenEvents>(this);
         }
 
         [DataContract]

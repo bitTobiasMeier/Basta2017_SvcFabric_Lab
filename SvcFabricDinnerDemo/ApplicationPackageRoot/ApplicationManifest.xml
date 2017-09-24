@@ -15,10 +15,16 @@
     <Parameter Name="TableActorService_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="TableActorService_TargetReplicaSetSize" DefaultValue="3" />
     <Parameter Name="X509FindValue" DefaultValue="4892e4af140e92a2ee614954df29b710d20928d4" />
+    <Parameter Name="KitchenActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="KitchenActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="KitchenActorService_TargetReplicaSetSize" DefaultValue="3" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="SvcFabricDinnerDemo.KitchenActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="SvcFabricDinnerDemo.TableActorPkg" ServiceManifestVersion="1.0.0" />
   </ServiceManifestImport>
@@ -69,6 +75,11 @@
     <Service Name="TableActorService" GeneratedIdRef="5b230bda-cc77-4f54-8db3-e1937e3f11be|Persisted">
       <StatefulService ServiceTypeName="TableActorServiceType" TargetReplicaSetSize="[TableActorService_TargetReplicaSetSize]" MinReplicaSetSize="[TableActorService_MinReplicaSetSize]">
         <UniformInt64Partition PartitionCount="[TableActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="KitchenActorService" GeneratedIdRef="de910275-7011-490d-ace1-2069925a2209|Persisted">
+      <StatefulService ServiceTypeName="KitchenActorServiceType" TargetReplicaSetSize="[KitchenActorService_TargetReplicaSetSize]" MinReplicaSetSize="[KitchenActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[KitchenActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
       </StatefulService>
     </Service>
   </DefaultServices>
