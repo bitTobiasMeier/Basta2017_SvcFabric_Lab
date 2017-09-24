@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.TableAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.TableActor.Interfaces", "SvcFabricDinnerDemo.TableActor.Interfaces\SvcFabricDinnerDemo.TableActor.Interfaces.csproj", "{80CE2775-258C-4961-9A65-3B748DB85399}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.RestaurantService.Tests", "SvcFabricDinnerDemo.RestaurantService.Tests\SvcFabricDinnerDemo.RestaurantService.Tests.csproj", "{00064585-684D-4B6D-8363-AD40DF106A28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,14 @@ Global
 		{80CE2775-258C-4961-9A65-3B748DB85399}.Release|Any CPU.ActiveCfg = Release|x64
 		{80CE2775-258C-4961-9A65-3B748DB85399}.Release|x64.ActiveCfg = Release|x64
 		{80CE2775-258C-4961-9A65-3B748DB85399}.Release|x64.Build.0 = Release|x64
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Debug|x64.Build.0 = Debug|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Release|x64.ActiveCfg = Release|Any CPU
+		{00064585-684D-4B6D-8363-AD40DF106A28}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
