@@ -36,7 +36,7 @@ namespace SvcFabricDinnerDemo.DinnerPlatform
                         ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Kestrel on {url}");
 
                         return new WebHostBuilder()
-                            .UseKestrel()
+                            .UseHttpSys()
                             .ConfigureServices(
                                 services => services
                                     .AddSingleton<StatelessServiceContext>(serviceContext))
