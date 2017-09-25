@@ -31,21 +31,20 @@ namespace SvcFabricDinnerDemo.DinnerPlatform
             return new ServiceInstanceListener[]
             {
                 new ServiceInstanceListener(serviceContext =>
-                    new WebListenerCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
+                    new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
                     {
-                        ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting WebListener on {url}");
+                        ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Kestrel on {url}");
 
                         return new WebHostBuilder()
-                                    .UseWebListener()
-                                    .ConfigureServices(
-                                        services => services
-                                            .AddSingleton<StatelessServiceContext>(serviceContext))
-                                    .UseContentRoot(Directory.GetCurrentDirectory())
-                                    .UseStartup<Startup>()
-                                    .UseApplicationInsights()
-                                    .UseServiceFabricIntegration(listener, ServiceFabricIntegrationOptions.None)
-                                    .UseUrls(url)
-                                    .Build();
+                            .UseHttpSys()
+                            .ConfigureServices(
+                                services => services
+                                    .AddSingleton<StatelessServiceContext>(serviceContext))
+                            .UseContentRoot(Directory.GetCurrentDirectory())
+                            .UseStartup<Startup>()
+                            .UseServiceFabricIntegration(listener, ServiceFabricIntegrationOptions.None)
+                            .UseUrls(url)
+                            .Build();
                     }))
             };
         }
