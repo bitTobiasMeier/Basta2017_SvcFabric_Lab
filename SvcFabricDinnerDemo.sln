@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "SvcFabricDinnerDemo", "SvcFabricDinnerDemo\SvcFabricDinnerDemo.sfproj", "{A92E480A-DC3F-4E03-A13C-21EED7E2F7CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvcFabricDinnerDemo.DinnerPlatform", "SvcFabricDinnerDemo.DinnerPlatform\SvcFabricDinnerDemo.DinnerPlatform.csproj", "{46A90CB6-F3F9-42F2-9780-16275908D0C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvcFabricDinnerDemo.DinnerPlatform", "SvcFabricDinnerDemo.DinnerPlatform\SvcFabricDinnerDemo.DinnerPlatform.csproj", "{46A90CB6-F3F9-42F2-9780-16275908D0C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
