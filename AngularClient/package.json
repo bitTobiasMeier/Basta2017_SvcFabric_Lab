@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "swagger": "./node_modules/.bin/nswag run dinnerapp.nswag"
+    "swagger": "./node_modules/.bin/nswag run dinnerapp.nswag",
+    "buildwwwroot" : "ng build --output-path=distwwwroot"
   },
   "private": true,
   "dependencies": {
