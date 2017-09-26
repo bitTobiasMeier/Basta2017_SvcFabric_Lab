@@ -21,7 +21,7 @@ namespace SvcFabricDinnerDemo.DinnerMenuService
         private const string RestaurantIdToMenucardsDictionaryname = "dishDic";
 
         public DinnerMenuService(StatefulServiceContext context, IDishStateManager dishStateManager,
-   IReliableStateManagerReplica stateManager)
+   IReliableStateManagerReplica2 stateManager)
    : base(context, stateManager)
         {
             _dishStateManager = dishStateManager;

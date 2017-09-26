@@ -27,7 +27,7 @@ namespace SvcFabricDinnerDemo.RestaurantService
             : base(context)
         { }
 
-        public RestaurantService(StatefulServiceContext serviceContext, IReliableStateManagerReplica reliableStateManagerReplica)
+        public RestaurantService(StatefulServiceContext serviceContext, IReliableStateManagerReplica2 reliableStateManagerReplica)
             : base(serviceContext, reliableStateManagerReplica)
         {
         }
