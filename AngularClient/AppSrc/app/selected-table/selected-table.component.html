@@ -1,0 +1,12 @@
+<p *ngIf="table == true">
+  Willkommen am Tisch {{table.tablenr}}
+</p>
+<div class="container">  
+  <a routerLink="order" class="btn btn-primary">Gericht auswählen</a> &nbsp;&nbsp;
+  <a routerLink="status" class="btn btn-primary">Bestellungen</a>
+  
+</div><br/>
+
+
+<router-outlet></router-outlet>
+

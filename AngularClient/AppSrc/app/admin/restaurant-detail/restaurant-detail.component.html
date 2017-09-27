@@ -1,0 +1,24 @@
+<div class="card-header">{{restaurant.name}}</div>
+<div class="card-body">
+  <div class="card-deck">
+    <div class="card">
+      <p id="anzahl"><b>{{restaurantTables.length}} Tisch(e)</b></p>
+      <div class="card-body">
+        <dinner-add-restaurant-table [restaurantId]="restaurant.id" (tableAdded)="restaurantTableAdded($event)"></dinner-add-restaurant-table>
+        <dinner-restaurant-tables [restaurantId]="restaurant.id" [restaurantTables]="restaurantTables"> </dinner-restaurant-tables>
+      </div>
+    </div>
+
+    <div class="card">
+      <p id="anzahl"><b>{{dishes.length}} Gericht(e)</b></p>
+      <div class="card-body">
+        <dinner-add-dish [restaurantId]="restaurant.id" (dishAdded)="dishAdded($event)"></dinner-add-dish>
+        <dinner-menucard-administration [restaurantId]="restaurant.id" [dishes]="dishes"></dinner-menucard-administration>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+
+</div>

@@ -1,0 +1,11 @@
+<div class="card-deck">
+
+        <div class="adminTableNumber" *ngFor="let dish of dishes">
+          <div class="card-block">
+              <img class="card-img-top" [src]="dish.imageUrl" [alt]="dish.name">
+           <h5 class="card-title"> {{dish.name}}</h5>
+           <div class="card-text">{{dish.description}} €</div>
+           <div class="card-text">Preis: {{dish.price}} €</div>
+          </div>
+        </div>
+</div>

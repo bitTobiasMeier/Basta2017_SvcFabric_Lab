@@ -1,0 +1,17 @@
+<div class="card-kitchen col-6">
+<p><b>Offene Bestellungen:</b></p>
+<div *ngFor="let order of kitchenQueue">
+  <div class="card-body">
+    <h3 class="menue-title">{{getDishname(order.dishId)}}</h3>    
+  </div>
+</div>
+</div>
+
+<div class="card-kitchen col-6">
+<p><b> Folgende Gerichte werden gerade gekocht:</b></p>
+  <div *ngFor="let order of cookingQueue">
+    <div class="card-body">
+      <h3 class="menue-title">{{getDishname(order.dishId)}}</h3>    
+    </div>
+  </div>
+</div>

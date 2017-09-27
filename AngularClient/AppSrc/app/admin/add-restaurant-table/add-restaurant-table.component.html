@@ -1,0 +1,26 @@
+<div id="adminNeuesRegister">
+    <div class="card-header">Neuer Tisch:</div>
+    <div class="card-body">
+      <form #form="ngForm" (ngSubmit)="save(form.value)" class="form-horizontal">
+
+
+              <div class="form-group">
+                <label for="name" class="control-label col-xs-1">Tischnummer:</label>
+                <div class="col-xs-1">
+                  <input type="text" name="tablenr" ngModel [(ngModel)]="tablenr" class="form-control ">
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <div class="col-xs-4">
+                  <span class="selected-message">{{message}}</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-4">
+                  <button type="submit" class="btn btn-default" id="button">Anlegen</button> </div>
+              </div>
+            </form>
+    </div>
+</div>

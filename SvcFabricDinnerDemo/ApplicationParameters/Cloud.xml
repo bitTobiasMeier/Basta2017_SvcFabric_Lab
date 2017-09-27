@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/SvcFabricDinnerDemo" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="SvcFabricDinnerDemo.DinnerMenuService_PartitionCount" Value="1" />
+    <Parameter Name="SvcFabricDinnerDemo.DinnerMenuService_MinReplicaSetSize" Value="3" />
+    <Parameter Name="SvcFabricDinnerDemo.DinnerMenuService_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="SvcFabricDinnerDemo.RestaurantService_PartitionCount" Value="1" />
+    <Parameter Name="SvcFabricDinnerDemo.RestaurantService_MinReplicaSetSize" Value="3" />
+    <Parameter Name="SvcFabricDinnerDemo.RestaurantService_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="SvcFabricDinnerDemo.DinnerPlatform_InstanceCount" Value="-1" />
+    <Parameter Name="X509FindValue" Value="F62BFEFEAE3567010523DE4B1489E7AA5C24F18A" />
+  </Parameters>
+</Application>
