@@ -85,6 +85,10 @@
     <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOrderEvents.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderActorProxy.cs" />
+    <Compile Include="OrderState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IOrderActor.cs" />
   </ItemGroup>

@@ -87,6 +87,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ITableActor.cs" />
+    <Compile Include="TableActorProxy.cs" />
+    <Compile Include="TableOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

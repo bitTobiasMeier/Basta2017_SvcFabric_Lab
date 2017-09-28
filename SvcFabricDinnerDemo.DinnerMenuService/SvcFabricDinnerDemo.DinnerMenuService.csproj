@@ -91,7 +91,10 @@
     <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DishContract.cs" />
+    <Compile Include="DishesContract.cs" />
     <Compile Include="DishStateManager.cs" />
+    <Compile Include="IDishStateManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DinnerMenuService.cs" />
     <Compile Include="Program.cs" />

@@ -102,7 +102,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Dish.cs" />
+    <Compile Include="Hashcalculator.cs" />
+    <Compile Include="IDinnerMenuAdminService.cs" />
+    <Compile Include="IDinnerMenuService.cs" />
+    <Compile Include="MenuServiceProxyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

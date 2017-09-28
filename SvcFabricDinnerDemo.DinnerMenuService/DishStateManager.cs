@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Data;
 using Microsoft.ServiceFabric.Data.Collections;
@@ -10,51 +8,6 @@ using SvcFabricDinnerDemo.DinnerMenuService.Interfaces;
 
 namespace SvcFabricDinnerDemo.DinnerMenuService
 {
-    public interface IDishStateManager
-    {
-        ITransaction CreateTransaction();
-        Task<Guid> AddDishAsync(ITransaction tx, Guid restaurantid, Dish dish);
-        Task<List<Dish>> GetDishesAsync(ITransaction tx, Guid restaurantid);
-        Task<Dish> GetDishAsync(ITransaction tx, Guid restaurantId, Guid dishId);
-    }
-
-    [DataContract]
-    public class DishContract
-    {
-        [DataMember]
-        public string Name { get; set; }
-
-        [DataMember]
-        public decimal Price { get; set; }
-
-        [DataMember]
-        public Guid Id { get; set; }
-
-        [DataMember]
-        public string Description { get; set; }
-
-        [DataMember]
-        public string ImageUrl { get; set; }
-    }
-
-    [DataContract]
-    public sealed class DishesContract
-    {
-        public DishesContract(IEnumerable<DishContract> dishes)
-        {
-            Dishes = (dishes == null) ? ImmutableList<DishContract>.Empty : dishes.ToImmutableList();
-        }
-
-        [DataMember]
-        public IEnumerable<DishContract> Dishes { get; private set; }
-
-        [OnDeserialized]
-        private void OnDeserialized(StreamingContext context)
-        {
-            Dishes = Dishes.ToImmutableList();
-        }
-    }
-
     public class DishStateManager : IDishStateManager
     {
         private const string RestaurantMenuListDictName = "RestaurantMenuListDictName";

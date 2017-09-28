@@ -102,8 +102,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Restaurant.cs" />
+    <Compile Include="IRestaurantAdminService.cs" />
+    <Compile Include="IRestaurantService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantServiceProxyFactory.cs" />
+    <Compile Include="RestaurantTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
