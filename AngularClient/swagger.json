@@ -1,0 +1,498 @@
+﻿{
+  "x-generator": "NSwag v11.7.2.0 (NJsonSchema v9.6.3.0)",
+  "swagger": "2.0",
+  "info": {
+    "title": "Web API Swagger specification",
+    "version": "1.0.0"
+  },
+  "schemes": [],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/Admin/Get": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_Get",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Restaurant"
+              }
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/Admin/Create": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_Create",
+        "parameters": [
+          {
+            "name": "restaurant",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/Restaurant"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Restaurant"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/RestaurantAdmin/{restaurantId}": {
+      "get": {
+        "tags": [
+          "RestaurantAdmin"
+        ],
+        "operationId": "RestaurantAdmin_GetMenuCard",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "restaurantId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Dish"
+              }
+            },
+            "x-nullable": true
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RestaurantAdmin"
+        ],
+        "operationId": "RestaurantAdmin_AddDish",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "restaurantId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false
+          },
+          {
+            "name": "dish",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/Dish"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Dish"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/RestaurantAdmin/CreateTable/{restaurantId}": {
+      "post": {
+        "tags": [
+          "RestaurantAdmin"
+        ],
+        "operationId": "RestaurantAdmin_CreateTable",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "restaurantId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          },
+          {
+            "name": "table",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/RestaurantTable"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RestaurantTable"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/RestaurantAdmin/GetTables/{restaurantId}": {
+      "get": {
+        "tags": [
+          "RestaurantAdmin"
+        ],
+        "operationId": "RestaurantAdmin_GetTables",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "restaurantId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/RestaurantTable"
+              }
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/Order": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "Order_Create",
+        "parameters": [
+          {
+            "name": "order",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/Order/GetOrder/{orderId}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "Order_GetOrder",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/Order/GetOrders/{tableId}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "Order_GetOrders",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TableOrder"
+              }
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/Restaurant/Get/{restaurantId}": {
+      "get": {
+        "tags": [
+          "Restaurant"
+        ],
+        "operationId": "Restaurant_Get",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "restaurantId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Restaurant"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    },
+    "/api/Restaurant/GetTable/{restaurantId}/{tableId}": {
+      "get": {
+        "tags": [
+          "Restaurant"
+        ],
+        "operationId": "Restaurant_GetTable",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "restaurantId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          },
+          {
+            "type": "string",
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "x-nullable": false,
+            "format": "guid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RestaurantTable"
+            },
+            "x-nullable": true
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Restaurant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "guid"
+        }
+      }
+    },
+    "Dish": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "price",
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "description": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "RestaurantTable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tablenr",
+        "id"
+      ],
+      "properties": {
+        "tablenr": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "type": "string",
+          "format": "guid"
+        }
+      }
+    },
+    "Order": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "restaurantId",
+        "orderId",
+        "tableId",
+        "dishId",
+        "price",
+        "orderState"
+      ],
+      "properties": {
+        "restaurantId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "orderId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "tableId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "dishId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "price": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "orderTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "servedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "orderState": {
+          "$ref": "#/definitions/OrderState"
+        }
+      }
+    },
+    "OrderState": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "None",
+        "Ordered",
+        "InKitchenQueue",
+        "Cooking",
+        "Cooked",
+        "Served",
+        "Payed"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "TableOrder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "orderId",
+        "price"
+      ],
+      "properties": {
+        "orderId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "price": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "servedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dish": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {}
+}

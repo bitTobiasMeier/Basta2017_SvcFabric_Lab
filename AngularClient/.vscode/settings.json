@@ -1,0 +1,13 @@
+{
+  "files.exclude": {          
+         "**/*.cs":true,
+         "PackageRoot":true,
+         "obj":true,
+         "Properties":true,
+         "Utilities":true,
+    "bin":true,
+         "Controllers":true,
+    "dist":true,
+    "*.csproj":true
+        }
+}
